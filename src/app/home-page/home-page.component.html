@@ -1,0 +1,90 @@
+<!--  <H2>Upload file ! </H2>
+<div class="card text-center">
+<div content="row">
+  <div class="col">
+    Choisir le fichier
+  </div>
+
+  <div class="col">
+    <input type="file" name="file" id="file" (change)="handleFiles($event.target.files)">
+  </div>
+</div>
+</div>
+<br><br>
+
+<div class="text-ali">
+<nz-card style="width:300px;" [nzBordered]="true" nzTitle="Person">
+  <tr *ngFor="let x of listOfAttributs; let i = index;">
+    <p> {{ i + 1 }} <p/>
+    <p> {{ x.visibility }} </p>
+    <p> {{ x.name }} </p>
+    <p> {{ x.type }} </p>
+  </tr>
+
+  <p>Card content</p>
+  <p>Card content</p>
+  <p>Card content</p>
+</nz-card>
+</div>
+ -->
+<H2>Function check!</H2>
+
+<div class="card text-center">
+  <div class="row">
+    <div class="col">
+      Choisir le fichier :
+    </div>
+    <div class="col">
+      <input type="file" name="file" id="file" (change)="handleFiles($event.target.files)">
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="card text-center" *ngIf="className">
+  <div class="card-header">
+    Classe name: {{ className }}
+  </div>
+  <div class="card-body">
+    <h6>Attributs</h6><br>
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
+          <tr class="thead-dark">
+            <th>N°</th>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Type</th>
+          </tr>
+          <tr *ngFor="let x of listOfAttributs; let i = index;">
+            <td> {{ i + 1 }} </td>
+            <td> {{ x.visibility }} </td>
+            <td> {{ x.name }} </td>
+            <td> {{ x.type }} </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br><br>
+
+    <h6>Methods</h6><br>
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
+          <tr class="thead-dark">
+            <th>N°</th>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Type</th>
+          </tr>
+          <tr *ngFor="let x of listOfMethods; let i = index;">
+            <td> {{ i + 1 }} </td>
+            <td> {{ x.visibility }} </td>
+            <td> {{ x.name }}() </td>
+            <td> {{ x.type }} </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
